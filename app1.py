@@ -32,7 +32,7 @@ def send_message(chat_id, text):
     payload = {"chat_id": chat_id, "text": text}
     requests.post(TELEGRAM_API_URL, json=payload)
 
-def send_message_with_button(chat_id, text, button_text="Watch", button_url="https://youtu.be/a5378NPgb2Y?si=FDxl7Fr83kVQb6NB"):
+def send_message_with_button(chat_id, text, button_text="Watch", button_url="https://whatsapp-bot-3-hdnu.onrender.com/"):
     
     keyboard = {
         "inline_keyboard": [
