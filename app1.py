@@ -7,6 +7,11 @@ app = Flask(__name__)
 TELEGRAM_TOKEN = "7277992515:AAGNrtbNJLvhPCLlOhurHL1FTu3MSxfz0rs"
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
 
+@app.route('/')
+def home():
+    return "Welcome to the Telegram Bot API!"
+
+
 @app.route('/telegram', methods=['POST'])
 def telegram_webhook():
     data = request.json
